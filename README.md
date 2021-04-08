@@ -1,2 +1,3 @@
 # gitops-demo
-Repository with a sample application deployment and OpenShift cluster configuration resources.
+
+Sample GitOps repository with a simplified directory layout.

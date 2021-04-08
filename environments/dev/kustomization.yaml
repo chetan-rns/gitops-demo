@@ -1,0 +1,7 @@
+bases:
+- ../../services/fib-go
+
+resources:
+- namespace.yaml
+
+namespace: dev

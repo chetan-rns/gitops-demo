@@ -1,0 +1,9 @@
+bases:
+- ../../applications/backend
+
+resources:
+- namespace.yaml
+
+namespace: stage
+
+# kam migrate --apps backend --env-name stage

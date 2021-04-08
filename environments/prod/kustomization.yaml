@@ -1,0 +1,12 @@
+bases:
+- ../../applications/backend
+- ../../applications/frontend
+- ../../services/ha-proxy
+
+resources:
+- namespace.yaml
+
+namespace: prod
+
+
+# kam migrate --services ha-proxy --apps backend frontend --env-name dev

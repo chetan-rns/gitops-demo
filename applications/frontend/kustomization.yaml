@@ -1,0 +1,7 @@
+bases:
+- ../../services/frontend-service
+
+
+commonLabels:
+  app.kubernetes.io/part-of: frontend
+  app: frontend
