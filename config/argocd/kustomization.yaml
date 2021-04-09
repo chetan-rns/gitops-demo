@@ -1,5 +1,9 @@
 resources:
 - dev-app.yaml
-- argo-app.yaml
+#- argo-app.yaml
 - stage-app.yaml
 - prod-app.yaml
+
+
+
+namespace: openshift-gitops

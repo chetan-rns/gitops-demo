@@ -3,5 +3,6 @@ bases:
 
 resources:
 - namespace.yaml
+- argocd-admin.yaml
 
 namespace: dev
