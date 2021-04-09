@@ -1,0 +1,42 @@
+config:
+  argocd:
+    namespace: openshift-gitops
+  pipelines:
+    name: cicd
+environments:
+- name : dev
+  applications:
+  - backend
+  - frontend
+  services:
+  - ha-proxy
+- stage:
+- prod:
+applications:
+- name : backend
+  services:
+  - fib-go
+  - fib-node
+  - fib-quarkus
+- name: frontend
+  services:
+  - frontend-service
+services:
+- name: taxi
+    pipelines:
+        integration:
+          bindings:
+          - dev-app-taxi-taxi-binding
+          - github-push-binding
+      source_url: https://github.com/ishitasequeira/taxi.git
+      webhook:
+        secret:
+          name: webhook-secret-dev-taxi
+          namespace: cicd
+- fib-go
+- fib-node
+- fib-quarkas
+- frontend-service
+- ha-proxy
+gitops_url: https://github.com/ishitasequeira/gitops.git
+version: 1

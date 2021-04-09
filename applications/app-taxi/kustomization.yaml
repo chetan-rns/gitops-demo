@@ -1,0 +1,7 @@
+bases:
+- ../../services/fib-go
+- ../../services/fib-node
+- ../../services/fib-quarkus
+
+resources:
+- service.yaml
