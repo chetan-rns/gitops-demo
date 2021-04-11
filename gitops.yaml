@@ -1,0 +1,49 @@
+config:
+  argocd:
+    namespace: openshift-gitops
+  pipelines:
+    name: cicd
+environments:
+- name: dev
+  applications:
+  - backend
+  - frontend
+  - app-taxi
+  services:
+  - {{HA_PROXY_SERVICE}}
+- name: stage
+- name: prod
+applications:
+- name: backend
+  services:
+  - {{FIB_GO_SERVICE}}
+  - {{FIB_NODE_SERVICE}}
+  - {{FIB_QUARKAS_SERVICE}}
+- name: frontend
+  services:
+  - {{FRONTEND_SERVICE_SERVICE}}
+- name: app-taxi
+  services:
+  - {{TAXI_SERVICE}}
+services:
+- name: {{TAXI_SERVICE}}
+- name: {{FIB_GO_SERVICE}}
+- name: {{FIB_NODE_SERVICE}}
+- name: {{FIB_QUARKAS_SERVICE}}
+- name: {{FRONTEND_SERVICE_SERVICE}}
+- name: {{HA_PROXY_SERVICE}}
+gitops_url: https://github.com/ishitasequeira/gitops.git
+version: 1
+vars:
+- key: TAXI_SERVICE
+  value: taxi
+- key: FIB_GO_SERVICE
+  value: fib-go
+- key: FIB_NODE_SERVICE
+  value: fib-node
+- key: FIB_QUARKAS_SERVICE
+  value: fib-quarkas
+- key: FRONTEND_SERVICE_SERVICE
+  value: frontend-service
+- key: HA_PROXY_SERVICE
+  value: ha-proxy
