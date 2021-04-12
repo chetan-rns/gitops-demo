@@ -1,0 +1,12 @@
+bases:
+- ../../../services/fib-go
+- ../../../services/fib-node
+- ../../../services/fib-quarkus
+
+resources:
+- service.yaml
+
+
+commonLabels:
+  app.kubernetes.io/part-of: backend
+  app: backend

@@ -1,5 +1,5 @@
 bases:
-- ../../applications/backend
+- ../../application/groups/backend # only deploy services in backend group
 
 resources:
 - namespace.yaml

@@ -1,0 +1,9 @@
+config:
+  argocd:
+    namespace: openshift-gitops
+  pipelines:
+    name: cicd
+
+
+gitops_url: https://github.com/chetan-rns/gitops.git
+version: 1

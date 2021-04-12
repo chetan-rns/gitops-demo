@@ -1,7 +1,5 @@
 bases:
-- ../../applications/backend
-- ../../applications/frontend
-- ../../services/ha-proxy
+- ../../application # deploy the entire application in prod
 
 resources:
 - namespace.yaml
