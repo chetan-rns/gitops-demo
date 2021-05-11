@@ -1,8 +1,0 @@
-# Each GitOps repository will be associated with a single application that can point to 
-
-bases:
-- ../services/fib-go
-- ../services/fib-node
-- ../services/fib-quarkus
-- ../services/frontend-service
-- ../services/ha-proxy

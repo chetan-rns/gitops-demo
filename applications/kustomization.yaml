@@ -1,0 +1,5 @@
+# Each GitOps repository comprises of applications poiting to services
+
+bases:
+- backend
+- frontend

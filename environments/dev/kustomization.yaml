@@ -1,5 +1,5 @@
 bases:
-- ../../services/fib-go
+- ../../applications/backend
 
 resources:
 - namespace.yaml
